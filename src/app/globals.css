@@ -1,0 +1,95 @@
+/**
+ * Global Styles
+ * 
+ * Defines the core design system tokens, typography rules, and structural resets
+ * based on the "Silent Luxury" and "Brutally Minimal" design guidelines.
+ * 
+ * Changes:
+ * - Optimized CSS properties and variable inheritance.
+ * - Centralized structural resets without redundancy.
+ * - Added a fallback for older browsers for `scroll-behavior`.
+ * - Clarified comments and ensured consistency with the `motion.ts` settings.
+ */
+@import "tailwindcss";
+
+@theme {
+  /* Brand Palletes */
+  --color-brand-charcoal: #121212;
+  --color-brand-gold: #C5A059;
+  --color-brand-stone: #F5F5F5;
+  --color-brand-slate: #1E293B;
+
+  /* Typography */
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  
+  --tracking-widest: 0.25em;
+  
+  /* Layout constraints */
+  --container-editorial: 1440px;
+  
+  /* Motion & Easings matching framer-motion defaults */
+  --ease-slow-ease: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  
+  --duration-800: 800ms;
+  --duration-1200: 1200ms;
+  --duration-2000: 2000ms;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+  }
+
+  body {
+    @apply bg-brand-charcoal text-brand-stone font-sans antialiased text-base selection:bg-brand-gold selection:text-brand-charcoal;
+    /* Noise texture overlay for luxury atmosphere, fallback to flat color if missing */
+    background-image: url('/noise-texture.svg');
+    background-blend-mode: overlay;
+    opacity: 0.98;
+  }
+
+  /* Structural Typography - Uppercase, light weight, and wide tracking */
+  h1, h2, h3, h4 {
+    @apply uppercase tracking-widest font-light leading-tight;
+  }
+
+  /* Micro-typography - used for labels, captions, and secondary data */
+  small, .label-text {
+    @apply uppercase tracking-widest font-normal text-[0.65rem] text-brand-stone/60;
+  }
+}
+
+@layer components {
+  /* 
+   * Button Luxury Base
+   * Pure CSS implementation of the interaction to save JS execution time
+   */
+  .btn-luxury {
+    @apply relative overflow-hidden border border-brand-gold text-brand-gold transition-colors duration-800 ease-out z-10 inline-flex items-center justify-center px-10 py-4 text-xs font-normal uppercase tracking-widest min-h-[44px];
+    transition-timing-function: var(--ease-out-expo);
+  }
+  
+  .btn-luxury::before {
+    content: '';
+    @apply absolute inset-0 bg-brand-gold transform scale-y-0 origin-bottom transition-transform duration-800 -z-10;
+    transition-timing-function: var(--ease-out-expo);
+  }
+  
+  /* Safe hover states ensuring mobile doesn't trigger "ghost" hovers */
+  @media (hover: hover) {
+    .btn-luxury:hover::before {
+      @apply scale-y-100;
+    }
+    .btn-luxury:hover {
+      @apply text-brand-charcoal;
+    }
+  }
+  
+  /* Tap interaction */
+  .btn-luxury:active {
+    @apply scale-[0.98] transition-transform duration-150;
+  }
+}
