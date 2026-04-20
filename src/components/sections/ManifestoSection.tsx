@@ -31,7 +31,7 @@ export const ManifestoSection: React.FC = () => {
         
         {/* Section Label */}
         <RevealSection className="lg:col-span-4 flex flex-col justify-start">
-          <h2 id="manifesto-title" className="label-text border-l border-brand-gold pl-4 text-brand-gold">
+          <h2 id="manifesto-title" className="label-text border-l border-brand-blue pl-4 text-brand-blue">
             The Manifesto
           </h2>
         </RevealSection>
@@ -43,7 +43,7 @@ export const ManifestoSection: React.FC = () => {
             aria-label="Form follows silence. Silence breeds perennity."
           >
             Form follows <span className="text-brand-stone/40 italic">silence</span>.<br />
-            Silence breeds <span className="text-brand-gold italic">perennity</span>.
+            Silence breeds <span className="text-brand-blue italic">perennity</span>.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8 border-t border-brand-stone/10">

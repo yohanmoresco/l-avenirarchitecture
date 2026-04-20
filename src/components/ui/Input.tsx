@@ -26,7 +26,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
         <input
           ref={ref}
           id={inputId}
-          className={`peer w-full bg-transparent border-b border-brand-stone/30 py-4 text-brand-stone font-light text-base focus:outline-none focus:ring-0 focus:border-brand-gold transition-colors duration-500 placeholder-transparent ${className}`.trim()}
+          className={`peer w-full bg-transparent border-b border-brand-stone/30 py-4 text-brand-stone font-light text-base focus:outline-none focus:ring-0 focus:border-brand-blue transition-colors duration-500 placeholder-transparent ${className}`.trim()}
           placeholder={placeholder || ' '}
           // Maintain compatibility with autofill and required flags
           {...props}
@@ -35,14 +35,14 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
         {/* Floating Label interacting with peer state */}
         <label 
           htmlFor={inputId}
-          className="absolute left-0 top-4 text-brand-stone/50 text-sm font-light uppercase tracking-widest transition-all duration-500 peer-focus:-top-4 peer-focus:text-[0.65rem] peer-focus:text-brand-gold peer-valid:-top-4 peer-valid:text-[0.65rem] cursor-text pointer-events-none"
+          className="absolute left-0 top-4 text-brand-stone/50 text-sm font-light uppercase tracking-widest transition-all duration-500 peer-focus:-top-4 peer-focus:text-[0.65rem] peer-focus:text-brand-blue peer-valid:-top-4 peer-valid:text-[0.65rem] cursor-text pointer-events-none"
         >
           {placeholder}
         </label>
         
         {/* Focus indicator strictly for visual accessibility */}
         <span 
-          className="absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold origin-left transform scale-x-0 transition-transform duration-500 peer-focus-visible:scale-x-100" 
+          className="absolute bottom-0 left-0 w-full h-[2px] bg-brand-blue origin-left transform scale-x-0 transition-transform duration-500 peer-focus-visible:scale-x-100" 
           aria-hidden="true" 
         />
       </div>

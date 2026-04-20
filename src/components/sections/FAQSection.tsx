@@ -45,7 +45,7 @@ export const FAQSection: React.FC = () => {
         
         {/* Sticky Lateral Block for Titles */}
         <RevealSection className="lg:col-span-4 lg:sticky lg:top-40">
-          <span className="label-text border-l border-brand-gold pl-4 text-brand-gold">Frequently Asked Questions</span>
+          <span className="label-text border-l border-brand-blue pl-4 text-brand-blue">Frequently Asked Questions</span>
           <h2 id="faq-heading" className="text-3xl md:text-5xl mt-6 lg:text-6xl text-brand-stone font-light leading-[1.1] tracking-widest uppercase mb-12">
             Objections &<br />
             Processes
@@ -66,7 +66,7 @@ export const FAQSection: React.FC = () => {
               delay={0.1 * idx} 
               className="border-t border-brand-stone/10 py-16 group hover:bg-brand-charcoal/50 transition-colors duration-700"
             >
-              <h3 className="text-xl md:text-2xl text-brand-stone font-light tracking-widest mb-8 pr-12 group-hover:text-brand-gold transition-colors duration-700">
+              <h3 className="text-xl md:text-2xl text-brand-stone font-light tracking-widest mb-8 pr-12 group-hover:text-brand-blue transition-colors duration-700">
                 {item.q}
               </h3>
               <p className="text-base text-brand-stone/70 font-light leading-relaxed max-w-2xl">

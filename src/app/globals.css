@@ -15,7 +15,7 @@
 @theme {
   /* Brand Palletes */
   --color-brand-charcoal: #121212;
-  --color-brand-gold: #C5A059;
+  --color-brand-blue: #60A5FA;
   --color-brand-stone: #F5F5F5;
   --color-brand-slate: #1E293B;
 
@@ -44,7 +44,7 @@
   }
 
   body {
-    @apply bg-brand-charcoal text-brand-stone font-sans antialiased text-base selection:bg-brand-gold selection:text-brand-charcoal;
+    @apply bg-brand-charcoal text-brand-stone font-sans antialiased text-base selection:bg-brand-blue selection:text-brand-charcoal;
     /* Noise texture overlay for luxury atmosphere, fallback to flat color if missing */
     background-image: url('/noise-texture.svg');
     background-blend-mode: overlay;
@@ -68,13 +68,13 @@
    * Pure CSS implementation of the interaction to save JS execution time
    */
   .btn-luxury {
-    @apply relative overflow-hidden border border-brand-gold text-brand-gold transition-colors duration-800 ease-out z-10 inline-flex items-center justify-center px-10 py-4 text-xs font-normal uppercase tracking-widest min-h-[44px];
+    @apply relative overflow-hidden border border-brand-blue text-brand-blue transition-colors duration-800 ease-out z-10 inline-flex items-center justify-center px-10 py-4 text-xs font-normal uppercase tracking-widest min-h-[44px];
     transition-timing-function: var(--ease-out-expo);
   }
   
   .btn-luxury::before {
     content: '';
-    @apply absolute inset-0 bg-brand-gold transform scale-y-0 origin-bottom transition-transform duration-800 -z-10;
+    @apply absolute inset-0 bg-brand-blue transform scale-y-0 origin-bottom transition-transform duration-800 -z-10;
     transition-timing-function: var(--ease-out-expo);
   }
   

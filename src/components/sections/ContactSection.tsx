@@ -32,7 +32,7 @@ export const ContactSection: React.FC = () => {
         <RevealSection>
           <div className="space-y-8">
             <span className="label-text">Direct Contact</span>
-            <h2 id="contact-heading" className="text-4xl md:text-5xl lg:text-6xl text-brand-gold">
+            <h2 id="contact-heading" className="text-4xl md:text-5xl lg:text-6xl text-brand-blue">
               Start a<br />Conversation
             </h2>
             <p className="text-brand-stone/70 font-light max-w-md leading-relaxed">
@@ -68,20 +68,20 @@ export const ContactSection: React.FC = () => {
             <div className="relative w-full mb-8 group">
               <textarea 
                 id={visionId}
-                className="peer w-full bg-transparent border-b border-brand-stone/30 py-4 text-brand-stone font-light text-base focus:outline-none focus:border-brand-gold transition-colors duration-500 placeholder-transparent resize-none min-h-[100px]"
+                className="peer w-full bg-transparent border-b border-brand-stone/30 py-4 text-brand-stone font-light text-base focus:outline-none focus:border-brand-blue transition-colors duration-500 placeholder-transparent resize-none min-h-[100px]"
                 placeholder="Vision details"
                 required
                 aria-required="true"
               />
               <label 
                 htmlFor={visionId}
-                className="absolute left-0 top-4 text-brand-stone/50 text-sm font-light uppercase tracking-widest transition-all duration-500 peer-focus:-top-4 peer-focus:text-[0.65rem] peer-focus:text-brand-gold peer-valid:-top-4 peer-valid:text-[0.65rem] pointer-events-none"
+                className="absolute left-0 top-4 text-brand-stone/50 text-sm font-light uppercase tracking-widest transition-all duration-500 peer-focus:-top-4 peer-focus:text-[0.65rem] peer-focus:text-brand-blue peer-valid:-top-4 peer-valid:text-[0.65rem] pointer-events-none"
               >
                 Vision details
               </label>
               {/* Focus indicator strictly for visual accessibility */}
               <span 
-                className="absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold origin-left transform scale-x-0 transition-transform duration-500 peer-focus-visible:scale-x-100" 
+                className="absolute bottom-0 left-0 w-full h-[2px] bg-brand-blue origin-left transform scale-x-0 transition-transform duration-500 peer-focus-visible:scale-x-100" 
                 aria-hidden="true" 
               />
             </div>

@@ -67,7 +67,7 @@ public/
 ## ❖ Design System
 - **Backgrounds:** `brand-charcoal` (#121212)
 - **Typography:** `brand-stone` (#F5F5F5) - Poppins (300, 400, 500)
-- **Accents:** `brand-gold` (#C5A059)
+- **Accents:** `brand-blue` (#C5A059)
 - **Textures:** Custom SVG noise overlay for an editorial/magazine feel.
 
 ---

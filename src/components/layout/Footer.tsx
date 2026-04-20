@@ -40,7 +40,7 @@ export const Footer: React.FC = () => {
             <div className="md:col-span-2">
               <div className="font-serif text-2xl text-brand-stone uppercase tracking-widest font-light mb-6">
                 L'Avenir <br />
-                <span className="text-brand-gold">Architecture</span>
+                <span className="text-brand-blue">Architecture</span>
               </div>
               <p className="text-sm text-brand-stone/50 font-light max-w-sm leading-relaxed">
                 Transforming the global architectural landscape through essential minimalism and refined sustainability.
@@ -53,7 +53,7 @@ export const Footer: React.FC = () => {
               {CONTACT_INFO.map((office) => (
                 <address key={office.city} className="not-italic text-sm text-brand-stone/70 font-light mb-2">
                   {office.city}<br />
-                  <a href={`tel:${office.phone.replace(/[^+\d]/g, '')}`} className="hover:text-brand-gold transition-colors">
+                  <a href={`tel:${office.phone.replace(/[^+\d]/g, '')}`} className="hover:text-brand-blue transition-colors">
                     {office.phone}
                   </a>
                 </address>
@@ -70,7 +70,7 @@ export const Footer: React.FC = () => {
                     href={social.url} 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-brand-stone/70 font-light hover:text-brand-gold transition-colors flex items-center w-fit gap-1 group"
+                    className="text-sm text-brand-stone/70 font-light hover:text-brand-blue transition-colors flex items-center w-fit gap-1 group"
                     aria-label={`Follow us on ${social.platform}`}
                   >
                     {social.platform} 
@@ -98,7 +98,7 @@ export const Footer: React.FC = () => {
               href="#" 
               target="_blank"
               rel="noopener noreferrer"
-              className="text-brand-stone hover:text-brand-gold transition-colors ml-1 focus-visible:outline-brand-gold"
+              className="text-brand-stone hover:text-brand-blue transition-colors ml-1 focus-visible:outline-brand-blue"
             >
               Movy
             </a>

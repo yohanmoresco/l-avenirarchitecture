@@ -29,7 +29,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     
     // Abstracted variant definitions for consistency
     const variants = {
-      primary: "btn-luxury border-brand-gold text-brand-gold",
+      primary: "btn-luxury border-brand-blue text-brand-blue",
       secondary: "btn-luxury border-brand-stone/30 text-brand-stone"
     };
 

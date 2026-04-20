@@ -43,7 +43,7 @@ export const TestimonialsSection: React.FC = () => {
       <div className="max-w-[1000px] mx-auto relative flex flex-col justify-center items-center text-center">
         
         <RevealSection className="mb-20">
-          <h2 className="label-text text-brand-gold tracking-widest uppercase">Perception of Value</h2>
+          <h2 className="label-text text-brand-blue tracking-widest uppercase">Perception of Value</h2>
         </RevealSection>
 
         {/* Testimonial Active Display with ARIA Live region */}
@@ -66,7 +66,7 @@ export const TestimonialsSection: React.FC = () => {
                   <span className="text-brand-stone/90 uppercase tracking-widest text-xs font-normal mb-2">
                     {TESTIMONIALS[currentIndex].client}
                   </span>
-                  <span className="text-brand-gold uppercase tracking-widest text-[0.65rem]">
+                  <span className="text-brand-blue uppercase tracking-widest text-[0.65rem]">
                     {TESTIMONIALS[currentIndex].location}
                   </span>
                 </figcaption>
@@ -88,7 +88,7 @@ export const TestimonialsSection: React.FC = () => {
               <span 
                 className={`block h-[1px] w-12 transition-all duration-700 ease-out ${
                   i === currentIndex 
-                    ? 'bg-brand-gold w-24' 
+                    ? 'bg-brand-blue w-24' 
                     : 'bg-brand-stone/20 group-hover:bg-brand-stone/50'
                 }`} 
                 aria-hidden="true" 

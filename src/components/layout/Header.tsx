@@ -61,7 +61,7 @@ export const Header: React.FC = () => {
       >
         <div className="max-w-[1440px] mx-auto px-6 lg:px-16 flex items-center justify-between">
           <div className="font-serif text-brand-stone uppercase tracking-widest text-sm lg:text-base font-light">
-            L'Avenir <span className="text-brand-gold">Architecture</span>
+            L'Avenir <span className="text-brand-blue">Architecture</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -70,14 +70,14 @@ export const Header: React.FC = () => {
               <a 
                 key={item.label} 
                 href={item.href} 
-                className="text-xs uppercase tracking-widest text-brand-stone/70 hover:text-brand-gold transition-colors duration-500"
+                className="text-xs uppercase tracking-widest text-brand-stone/70 hover:text-brand-blue transition-colors duration-500"
               >
                 {item.label}
               </a>
             ))}
             <a 
               href="#contact" 
-              className="text-xs uppercase tracking-widest text-brand-charcoal bg-brand-gold px-6 py-2 hover:bg-white hover:text-brand-charcoal transition-all duration-500"
+              className="text-xs uppercase tracking-widest text-brand-charcoal bg-brand-blue px-6 py-2 hover:bg-white hover:text-brand-charcoal transition-all duration-500"
             >
               Consultation
             </a>
@@ -125,7 +125,7 @@ export const Header: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 + (i * 0.1), duration: 0.5 }}
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-brand-stone hover:text-brand-gold transition-colors block"
+                  className="text-brand-stone hover:text-brand-blue transition-colors block"
                 >
                   {item.label}
                 </motion.a>
