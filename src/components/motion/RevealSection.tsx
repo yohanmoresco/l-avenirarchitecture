@@ -33,7 +33,7 @@ export const RevealSection: React.FC<RevealProps> = ({ children, className = '',
   // If the user prefers reduced motion, we strip the complicated easing animations
   const transitionConfig = shouldReduceMotion 
     ? { duration: 0 } 
-    : { delay, duration: 0.8, ease: [0.65, 0, 0.35, 1] };
+    : { delay, duration: 0.8, ease: [0.65, 0, 0.35, 1] as const };
 
   // Note: Using a standard div fallback instead of framer motion div 
   // when motion is disabled guarantees no layout shift side-effects
